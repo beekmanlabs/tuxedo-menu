@@ -1,0 +1,103 @@
+@import "variables";
+@import "tuxedo-menu-trigger";
+
+.tuxedo-menu {
+    font-family: $tuxedo-menu-font-family;
+    background: #0f0f0f;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            border-left: $tuxedo-menu-item-border-left;
+
+            &:last-child {
+                border-bottom: $tuxedo-menu-link-border;
+            }
+
+            a {
+                color: $tuxedo-menu-link-color;
+                font-size: $tuxedo-menu-link-font-size;
+                text-decoration: none;
+
+                &:hover, &:focus {
+                    color: $tuxedo-menu-link-hover-color;
+                    background: $tuxedo-menu-link-hover-bg;
+                }
+            }
+
+            a, .heading {
+                font-weight: $tuxedo-menu-font-weight;
+                border-top: $tuxedo-menu-link-border;
+                border-right: $tuxedo-menu-link-border;
+                border-left: none;
+                display: block;
+                padding: $tuxedo-menu-link-vertical-padding $tuxedo-menu-link-horizontal-padding;
+            }
+
+            .heading {
+                font-size: $tuxedo-menu-heading-font-size;
+                font-weight: $tuxedo-menu-heading-font-weight;
+                color: $tuxedo-menu-heading-color;
+            }
+
+            &.active a {
+                color: $tuxedo-menu-link-active-color;
+                background: $tuxedo-menu-link-active-bg;
+            }
+
+        }
+    }
+
+    @for $i from 0 to $tuxedo-menu-item-max-depth {
+        .#{$tuxedo-menu-item-depth-prefix}#{$i} a,
+        .#{$tuxedo-menu-item-depth-prefix}#{$i} .heading {
+            padding-left: ($tuxedo-menu-link-horizontal-padding * $i) + $tuxedo-menu-link-horizontal-padding;
+        }
+    }
+
+    &.tuxedo-menu-fixed {
+        position: fixed;
+        top: 0;
+        left: -256px;
+        width: 256px;
+        height:100%;
+        overflow-y: scroll;
+
+        &.tuxedo-menu-slide-opening {
+            -webkit-animation: tuxedo-menu-slide-opening 0.5s forwards;
+            animation: slide 0.5s forwards;
+        }
+
+        @-webkit-keyframes tuxedo-menu-slide-opening {
+            100% {
+                left: 0;
+            }
+        }
+
+        @keyframes tuxedo-menu-slide-opening {
+            100% {
+                left: 0;
+            }
+        }
+
+        &.tuxedo-menu-slide-closing:not(.tuxedo-menu-pristine) {
+            -webkit-animation: tuxedo-menu-slide-closing 0.5s forwards;
+            animation: slide-closed 0.5s forwards;
+        }
+
+        @-webkit-keyframes tuxedo-menu-slide-closing {
+            0% {
+                left: 0;
+            }
+        }
+
+        @-webkit-keyframes tuxedo-menu-slide-closed {
+            0% {
+                left: 0;
+            }
+        }
+    }
+}

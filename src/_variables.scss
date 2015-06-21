@@ -1,29 +1,29 @@
-$menu-gray-base: #f9f9f9;
-$menu-brand-primary: #0f0;
+$tuxedo-menu-gray-base: #f9f9f9;
+$tuxedo-menu-brand-primary: #0f0;
 
 // Type
-$menu-font-family:      'Helvetica Neue', Helvetica, Arial, sans-serif !default;
-$menu-font-size-base:   13px !default;
-$menu-font-weight:      700 !default;
+$tuxedo-menu-font-family:      'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$tuxedo-menu-font-size-base:   13px !default;
+$tuxedo-menu-font-weight:      700 !default;
 
 // Items
-//$menu-item-border-left:     solid 5px $menu-brand-primary !default;
-$menu-item-border-left:     none !default;
-$menu-item-max-depth:       10 !default;
-$menu-item-depth-prefix:    menu-depth- !default;
+//$tuxedo-menu-item-border-left:     solid 5px $tuxedo-menu-brand-primary !default;
+$tuxedo-menu-item-border-left:     none !default;
+$tuxedo-menu-item-max-depth:       10 !default;
+$tuxedo-menu-item-depth-prefix:    menu-depth- !default;
 
 // Links
-$menu-link-font-size:           $menu-font-size-base !default;
-$menu-link-horizontal-padding:  15px !default;
-$menu-link-vertical-padding:    10px !default;
-$menu-link-color:               #e0e0e0 !default;
-$menu-link-hover-color:         #fff !default;
-$menu-link-hover-bg:            #4f4f4f !default;
-$menu-link-active-color:        #333 !default;
-$menu-link-active-bg:           #f9f9f9 !default;
-$menu-link-border:              none !default;
+$tuxedo-menu-link-font-size:           $tuxedo-menu-font-size-base !default;
+$tuxedo-menu-link-horizontal-padding:  15px !default;
+$tuxedo-menu-link-vertical-padding:    10px !default;
+$tuxedo-menu-link-color:               #e0e0e0 !default;
+$tuxedo-menu-link-hover-color:         #fff !default;
+$tuxedo-menu-link-hover-bg:            #4f4f4f !default;
+$tuxedo-menu-link-active-color:        #333 !default;
+$tuxedo-menu-link-active-bg:           #f9f9f9 !default;
+$tuxedo-menu-link-border:              none !default;
 
 // Heading
-$menu-heading-font-size:   $menu-font-size-base !default;
-$menu-heading-font-weight: 0 !default;
-$menu-heading-color:       #666 !default;
+$tuxedo-menu-heading-font-size:   $tuxedo-menu-font-size-base !default;
+$tuxedo-menu-heading-font-weight: 0 !default;
+$tuxedo-menu-heading-color:       #666 !default;
