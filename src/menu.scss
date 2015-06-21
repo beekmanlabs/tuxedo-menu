@@ -1,0 +1,64 @@
+@import "variables";
+
+.flat-menu {
+    font-family: $menu-font-family;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 256px;
+    height:100%;
+    background: #0f0f0f;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            border-left: $menu-item-border-left;
+
+            &:last-child {
+                border-bottom: $menu-link-border;
+            }
+
+            a {
+                color: $menu-link-color;
+                font-size: $menu-link-font-size;
+                text-decoration: none;
+
+                &:hover, &:focus {
+                    color: $menu-link-hover-color;
+                    background: $menu-link-hover-bg;
+                }
+            }
+
+            a, .heading {
+                font-weight: $menu-font-weight;
+                border-top: $menu-link-border;
+                border-right: $menu-link-border;
+                border-left: none;
+                display: block;
+                padding: $menu-link-vertical-padding $menu-link-horizontal-padding;
+            }
+
+            .heading {
+                font-size: $menu-heading-font-size;
+                font-weight: $menu-heading-font-weight;
+                color: $menu-heading-color;
+            }
+
+            &.active a {
+                color: $menu-link-active-color;
+                background: $menu-link-active-bg;
+            }
+
+        }
+    }
+
+    @for $i from 0 to $menu-item-max-depth {
+        .#{$menu-item-depth-prefix}#{$i} a,
+        .#{$menu-item-depth-prefix}#{$i} .heading {
+            padding-left: ($menu-link-horizontal-padding * $i) + $menu-link-horizontal-padding;
+        }
+    }
+}
