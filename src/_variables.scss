@@ -7,7 +7,6 @@ $tuxedo-menu-font-size-base:   13px !default;
 $tuxedo-menu-font-weight:      700 !default;
 
 // Items
-//$tuxedo-menu-item-border-left:     solid 5px $tuxedo-menu-brand-primary !default;
 $tuxedo-menu-item-border-left:     none !default;
 $tuxedo-menu-item-max-depth:       10 !default;
 $tuxedo-menu-item-depth-prefix:    menu-depth- !default;
@@ -20,7 +19,7 @@ $tuxedo-menu-link-color:               #e0e0e0 !default;
 $tuxedo-menu-link-hover-color:         #fff !default;
 $tuxedo-menu-link-hover-bg:            #4f4f4f !default;
 $tuxedo-menu-link-active-color:        #333 !default;
-$tuxedo-menu-link-active-bg:           #f9f9f9 !default;
+$tuxedo-menu-link-active-bg:           #fff !default;
 $tuxedo-menu-link-border:              none !default;
 
 // Heading
