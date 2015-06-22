@@ -1,0 +1,27 @@
+{
+  "name": "tuxedo-menu",
+  "version": "0.1.0",
+  "homepage": "https://github.com/ethanhann/tuxedo-menu",
+  "authors": [
+    "Ethan Hann <ethanhann@gmail.com>"
+  ],
+  "description": "A simple jQuery navigation menu plugin.",
+  "main": ["src/tuxedo-menu.js", "src/tuxedo-menu.css"],
+  "keywords": [
+    "jQuery",
+    "menu",
+    "navigation",
+    "sidebar"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": ">1.8"
+  }
+}
