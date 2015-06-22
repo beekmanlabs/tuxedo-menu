@@ -70,25 +70,3 @@
     width: 256px;
     height: 100%;
     overflow-y: scroll; }
-    .tuxedo-menu.tuxedo-menu-fixed.tuxedo-menu-slide-opening {
-      -webkit-animation: tuxedo-menu-slide-opening 0.5s forwards;
-      animation: slide 0.5s forwards; }
-
-@-webkit-keyframes tuxedo-menu-slide-opening {
-  100% {
-    left: 0; } }
-
-@keyframes tuxedo-menu-slide-opening {
-  100% {
-    left: 0; } }
-    .tuxedo-menu.tuxedo-menu-fixed.tuxedo-menu-slide-closing:not(.tuxedo-menu-pristine) {
-      -webkit-animation: tuxedo-menu-slide-closing 0.5s forwards;
-      animation: tuxedo-menu-slide-closing 0.5s forwards; }
-
-@-webkit-keyframes tuxedo-menu-slide-closing {
-  0% {
-    left: 0; } }
-
-@keyframes tuxedo-menu-slide-closing {
-  0% {
-    left: 0; } }
