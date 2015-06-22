@@ -17,9 +17,13 @@
         $(settings.triggerSelector).addClass('tuxedo-menu-trigger');
 
         $(settings.triggerSelector).on('click', function () {
-            $('.tuxedo-menu')
+            $(settings.menuSelector)
                 .addClass('tuxedo-menu-slide-opening')
-                .removeClass('tuxedo-menu-slide-closing tuxedo-menu-pristine');
+                .removeClass('tuxedo-menu-slide-closing tuxedo-menu-pristine')
+                .animate({
+                    opacity: 1,
+                    left: 0
+                });
         });
 
         $(document).click(function (event) {
@@ -31,7 +35,11 @@
                 !$(event.target).closest(settings.menuSelector).length) {
                 $(settings.menuSelector)
                     .addClass('tuxedo-menu-slide-closing')
-                    .removeClass('tuxedo-menu-slide-opening');
+                    .removeClass('tuxedo-menu-slide-opening')
+                    .animate({
+                        opacity: 0.4,
+                        left: '-256px'
+                    });
             }
         });
 
