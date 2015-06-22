@@ -83,12 +83,12 @@
     left: 0; } }
     .tuxedo-menu.tuxedo-menu-fixed.tuxedo-menu-slide-closing:not(.tuxedo-menu-pristine) {
       -webkit-animation: tuxedo-menu-slide-closing 0.5s forwards;
-      animation: slide-closed 0.5s forwards; }
+      animation: tuxedo-menu-slide-closing 0.5s forwards; }
 
 @-webkit-keyframes tuxedo-menu-slide-closing {
   0% {
     left: 0; } }
 
-@-webkit-keyframes tuxedo-menu-slide-closed {
+@keyframes tuxedo-menu-slide-closing {
   0% {
     left: 0; } }
