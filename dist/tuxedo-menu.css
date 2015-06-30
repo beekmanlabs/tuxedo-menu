@@ -3,7 +3,9 @@
 
 .tuxedo-menu {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: #0f0f0f; }
+  background: #0f0f0f;
+  -webkit-animation-duration: 200ms;
+          animation-duration: 200ms; }
   .tuxedo-menu ul {
     margin: 0;
     padding: 0;
@@ -25,7 +27,9 @@
         border-right: none;
         border-left: none;
         display: block;
-        padding: 10px 15px; }
+        padding: 10px 15px;
+        height: 20px;
+        line-height: 20px; }
       .tuxedo-menu ul li .heading {
         font-size: 13px;
         font-weight: 0;
@@ -66,7 +70,13 @@
   .tuxedo-menu.tuxedo-menu-fixed {
     position: fixed;
     top: 0;
-    left: -256px;
-    width: 256px;
+    left: 0;
+    width: 30%;
     height: 100%;
     overflow-y: scroll; }
+  .tuxedo-menu.tuxedo-menu-pristine {
+    display: none; }
+
+@media (max-width: 768px) {
+  .tuxedo-menu.tuxedo-menu-fixed {
+    width: 80%; } }
