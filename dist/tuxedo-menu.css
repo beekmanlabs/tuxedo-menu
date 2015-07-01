@@ -5,7 +5,8 @@
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: #0f0f0f;
   -webkit-animation-duration: 200ms;
-          animation-duration: 200ms; }
+          animation-duration: 200ms;
+  display: none; }
   .tuxedo-menu ul {
     margin: 0;
     padding: 0;
@@ -74,8 +75,8 @@
     width: 30%;
     height: 100%;
     overflow-y: scroll; }
-  .tuxedo-menu.tuxedo-menu-pristine {
-    display: none; }
+  .tuxedo-menu.tuxedo-menu-dirty {
+    display: inherit; }
 
 @media (max-width: 768px) {
   .tuxedo-menu.tuxedo-menu-fixed {

@@ -18,8 +18,8 @@
 
         $(settings.triggerSelector).on('click', function () {
             $(settings.menuSelector)
-                .removeClass('slideOutLeft tuxedo-menu-pristine')
-                .addClass('slideInLeft');
+                .removeClass('slideOutLeft')
+                .addClass('slideInLeft tuxedo-menu-dirty');
         });
 
         $(document).click(function (event) {
