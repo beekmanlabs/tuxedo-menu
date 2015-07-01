@@ -4,18 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.3.0/animate.min.css">
     <link rel="stylesheet" href="../dist/tuxedo-menu.min.css">
 </head>
 <body>
-<div class="jumbotron">
+<nav class="navbar navbar-default">
     <div class="container">
-        <h1><span class="tuxedo-menu-trigger">&#9776;</span> Tuxedo Menu</h1>
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Tuxedo Menu</a>
+        </div>
+        <div class="btn btn-default navbar-btn navbar-right tuxedo-menu-trigger">&#9776;</div>
     </div>
-</div>
-<div class="container tuxedo-menu-content-wrapper">
+</nav>
+<div class="container">
     <div class="row">
-        <div class="col-lg-3">
+        <div id="menu-container">
             <nav id="sidebar" class="tuxedo-menu">
                 <ul>
                     <li class="menu-depth-0"><a href="#">Item 1</a></li>
@@ -38,18 +42,40 @@
                 </ul>
             </nav>
         </div>
-        <div class="col-lg-9">
-            <h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br>
-            <h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br>
-            <h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br>
-            <h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br><h2>Main Content ----- Main Content ----- Main Content ----- Main Content</h2><br>
+
+        <div class="col-sm-9">
+            <p>
+                This is a demo for <strong>Tuxedo Menu</strong>, a simple jQuery menu plugin.
+            </p>
+            <p>
+                This is the <a href="https://github.com/ethanhann/tuxedo-menu">GitHub</a> project.
+            </p>
+            <p>
+                See the <a href="https://github.com/ethanhann/tuxedo-menu/blob/master/README.md">readme</a> for
+                installation and usage instructions.
+            </p>
+            <p>
+                Toggle between sidebar and drawer style menu:
+                <button class="btn btn-default" id="toggle-is-fixed">
+                    Toggle Menu Type
+                </button>
+            </p>
         </div>
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="../dist/tuxedo-menu.min.js"></script>
 <script>
-    jQuery('#sidebar').tuxedoMenu();
+    (function ($) {
+        var isFixed = true;
+        $('#sidebar').tuxedoMenu({ isFixed: isFixed });
+
+        $('#toggle-is-fixed').on('click', function () {
+            $('#sidebar').tuxedoMenu({ isFixed: isFixed = !isFixed });
+            $('#menu-container').toggleClass('col-sm-3');
+            $('.tuxedo-menu-trigger').toggleClass('hidden');
+        });
+    })(jQuery);
 </script>
 </body>
 </html>
