@@ -5,6 +5,7 @@
     font-family: $tuxedo-menu-font-family;
     background: $tuxedo-menu-bg;
     animation-duration: 200ms;
+    display: none;
 
     ul {
         margin: 0;
@@ -70,8 +71,8 @@
         overflow-y: scroll;
     }
 
-    &.tuxedo-menu-pristine {
-        display: none;
+    &.tuxedo-menu-dirty {
+        display: inherit;
     }
 }
 
