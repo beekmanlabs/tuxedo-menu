@@ -24,6 +24,11 @@
                 background: $tuxedo-menu-link-hover-bg;
             }
 
+            &:hover .heading, &:focus .heading {
+                color: $tuxedo-menu-heading-color;
+                background: $tuxedo-menu-bg;
+            }
+
             a {
                 color: $tuxedo-menu-link-color;
                 font-size: $tuxedo-menu-link-font-size;
