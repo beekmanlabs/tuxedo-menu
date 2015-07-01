@@ -7,7 +7,7 @@ bower install --save tuxedo-menu
 ```
 
 ## Include
-### Include Dependencies
+__Include Dependencies__
 ```css
 <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
 ```
@@ -16,7 +16,7 @@ bower install --save tuxedo-menu
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 ```
 
-### Include Tuxedo Menu
+__Include Tuxedo Menu__
 ```css
 <link rel="stylesheet" href="bower_components/tuxedo-menu/dist/tuxedo-menu.min.css" />
 ```
@@ -46,6 +46,11 @@ __Create an HTML menu__
 </nav>
 ```
 
+__Add a Trigger Button for the Menu__
+```html
+<span class="tuxedo-menu-trigger">&#9776;</span>
+```
+
 __Initialize a Tuxedo Menu__
 ```javascript
 jQuery('#myMenu').tuxedoMenu();
@@ -55,3 +60,36 @@ __For mobile, Add a Viewport Meta Tag to the Page's Head Element__
 ```html
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 ```
+
+##  Configuration Options
+
+```javascript
+jQuery('#myMenu').tuxedoMenu({
+    triggerSelector: '.tuxedo-menu-trigger',
+    menuSelector: '.tuxedo-menu',
+    activeClass: 'active',
+    addActiveClass: true,
+    isFixed: true
+});
+```
+
+__triggerSelector__
+
+The jQuery selector for choosing which element to treat as the menu's trigger.
+
+__menuSelector__
+
+The jQuery selector for choosing which element to treat as the menu.
+
+__activeClass__
+
+The CSS class to add to a menu item when it is selected.
+
+__addActiveClass__
+
+A boolean to decide if an "active" class should be added to a menu item when it is selected.
+
+__isFixed__
+
+A boolean to make the menu fixed or in the flow of the document.
+
