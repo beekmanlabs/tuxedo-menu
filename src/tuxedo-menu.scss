@@ -19,15 +19,15 @@
                 border-bottom: $tuxedo-menu-link-border;
             }
 
+            &:hover, &:focus {
+                color: $tuxedo-menu-link-hover-color;
+                background: $tuxedo-menu-link-hover-bg;
+            }
+
             a {
                 color: $tuxedo-menu-link-color;
                 font-size: $tuxedo-menu-link-font-size;
                 text-decoration: none;
-
-                &:hover, &:focus {
-                    color: $tuxedo-menu-link-hover-color;
-                    background: $tuxedo-menu-link-hover-bg;
-                }
             }
 
             a, .heading {
@@ -37,7 +37,6 @@
                 border-left: none;
                 display: block;
                 padding: $tuxedo-menu-link-vertical-padding $tuxedo-menu-link-horizontal-padding;
-                height: $tuxedo-menu-item-height;
                 line-height: $tuxedo-menu-item-line-height;
             }
 
@@ -65,13 +64,20 @@
     &.tuxedo-menu-fixed {
         position: fixed;
         top: 0;
-        left:  0;
+        left: 0;
         width: 30%;
-        height:100%;
+        height: 100%;
         overflow-y: scroll;
+        z-index: 9999;
+        opacity: 1;
+
+        ul li a,
+        ul li .heading {
+            height: $tuxedo-menu-item-height * 2;
+        }
     }
 
-    &.tuxedo-menu-dirty {
+    &.tuxedo-menu-visible {
         display: inherit;
     }
 }

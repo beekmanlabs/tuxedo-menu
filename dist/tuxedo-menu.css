@@ -15,13 +15,13 @@
       border-left: none; }
       .tuxedo-menu ul li:last-child {
         border-bottom: none; }
+      .tuxedo-menu ul li:hover, .tuxedo-menu ul li:focus {
+        color: #fff;
+        background: #4f4f4f; }
       .tuxedo-menu ul li a {
         color: #e0e0e0;
         font-size: 13px;
         text-decoration: none; }
-        .tuxedo-menu ul li a:hover, .tuxedo-menu ul li a:focus {
-          color: #fff;
-          background: #4f4f4f; }
       .tuxedo-menu ul li a, .tuxedo-menu ul li .heading {
         font-weight: 700;
         border-top: none;
@@ -29,7 +29,6 @@
         border-left: none;
         display: block;
         padding: 10px 15px;
-        height: 20px;
         line-height: 20px; }
       .tuxedo-menu ul li .heading {
         font-size: 13px;
@@ -74,8 +73,13 @@
     left: 0;
     width: 30%;
     height: 100%;
-    overflow-y: scroll; }
-  .tuxedo-menu.tuxedo-menu-dirty {
+    overflow-y: scroll;
+    z-index: 9999;
+    opacity: 1; }
+    .tuxedo-menu.tuxedo-menu-fixed ul li a,
+    .tuxedo-menu.tuxedo-menu-fixed ul li .heading {
+      height: 40px; }
+  .tuxedo-menu.tuxedo-menu-visible {
     display: inherit; }
 
 @media (max-width: 768px) {
