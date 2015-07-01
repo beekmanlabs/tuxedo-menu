@@ -19,20 +19,15 @@
                 border-bottom: $tuxedo-menu-link-border;
             }
 
-            &:hover, &:focus {
-                color: $tuxedo-menu-link-hover-color;
-                background: $tuxedo-menu-link-hover-bg;
-            }
-
-            &:hover .heading, &:focus .heading {
-                color: $tuxedo-menu-heading-color;
-                background: $tuxedo-menu-bg;
-            }
-
             a {
                 color: $tuxedo-menu-link-color;
                 font-size: $tuxedo-menu-link-font-size;
                 text-decoration: none;
+
+                &:hover, &:focus {
+                    color: $tuxedo-menu-link-hover-color;
+                    background: $tuxedo-menu-link-hover-bg;
+                }
             }
 
             a, .heading {
