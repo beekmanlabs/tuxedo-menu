@@ -15,16 +15,13 @@
       border-left: none; }
       .tuxedo-menu ul li:last-child {
         border-bottom: none; }
-      .tuxedo-menu ul li:hover, .tuxedo-menu ul li:focus {
-        color: #fff;
-        background: #4f4f4f; }
-      .tuxedo-menu ul li:hover .heading, .tuxedo-menu ul li:focus .heading {
-        color: #666;
-        background: #0f0f0f; }
       .tuxedo-menu ul li a {
         color: #e0e0e0;
         font-size: 13px;
         text-decoration: none; }
+        .tuxedo-menu ul li a:hover, .tuxedo-menu ul li a:focus {
+          color: #fff;
+          background: #4f4f4f; }
       .tuxedo-menu ul li a, .tuxedo-menu ul li .heading {
         font-weight: 700;
         border-top: none;
