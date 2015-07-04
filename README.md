@@ -1,5 +1,5 @@
 # tuxedo-menu
-A simple jQuery menu plugin with a flat HTML menu structure.
+A simple jQuery menu plugin that is compatible with metisMenu.
 
 ## Install
 ```bash
