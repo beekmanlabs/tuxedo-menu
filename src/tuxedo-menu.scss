@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins/pad-menu-items";
 @import "tuxedo-menu-trigger";
 
 .tuxedo-menu {
@@ -30,36 +31,28 @@
                 }
             }
 
-            a, .heading {
+            a, h1 {
                 font-weight: $tuxedo-menu-font-weight;
                 border-top: $tuxedo-menu-link-border;
                 border-right: $tuxedo-menu-link-border;
                 border-left: none;
                 display: block;
-                padding: $tuxedo-menu-link-vertical-padding $tuxedo-menu-link-horizontal-padding;
+                padding-top: $tuxedo-menu-link-vertical-padding;
+                padding-bottom: $tuxedo-menu-link-vertical-padding;
+                padding-right: $tuxedo-menu-link-horizontal-padding;
                 line-height: $tuxedo-menu-item-line-height;
             }
 
-            .heading {
+            h1 {
                 font-size: $tuxedo-menu-heading-font-size;
                 font-weight: $tuxedo-menu-heading-font-weight;
                 color: $tuxedo-menu-heading-color;
+                margin: 0;
             }
-
-            &.active a {
-                color: $tuxedo-menu-link-active-color;
-                background: $tuxedo-menu-link-active-bg;
-            }
-
         }
     }
 
-    @for $i from 0 to $tuxedo-menu-item-max-depth {
-        .#{$tuxedo-menu-item-depth-prefix}#{$i} a,
-        .#{$tuxedo-menu-item-depth-prefix}#{$i} .heading {
-            padding-left: ($tuxedo-menu-link-horizontal-padding * $i) + $tuxedo-menu-link-horizontal-padding;
-        }
-    }
+    @include pad-menu-items(".tuxedo-menu-item-content", "> ", $tuxedo-menu-item-max-depth);
 
     &.tuxedo-menu-fixed {
         position: fixed;
@@ -67,7 +60,7 @@
         left: 0;
         width: 30%;
         height: 100%;
-        overflow-y: scroll;
+        overflow-y: auto;
         z-index: 9999;
         opacity: 1;
 
@@ -87,3 +80,4 @@
         width: 80%;
     }
 }
+

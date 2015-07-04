@@ -7,6 +7,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/cyborg/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.3.0/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/metisMenu/2.0.2/metisMenu.min.css">
     <link rel="stylesheet" href="../dist/tuxedo-menu.css">
     <link rel="stylesheet" href="demo.css">
 </head>
@@ -27,11 +28,11 @@
     </div>
 </nav>
 <div class="container">
-    <h1 class="page-header">Tuxedo Menu <small>all by itself</small></h1>
+    <h1 class="page-header">Tuxedo Menu <small>with metisMenu</small></h1>
 
     <div class="row">
         <div id="menu-container">
-            <nav id="sidebar" class="tuxedo-menu">
+            <nav id="sidebar" class="tuxedo-menu metismenu">
                 <ul>
                     <li>
                         <h1 class="tuxedo-menu-item-content">Heading 1</h1>
@@ -69,11 +70,12 @@
 
         <div class="col-sm-9">
             <p>
-                This is a demo of <strong>Tuxedo Menu</strong>, a simple jQuery menu plugin.
+                This is a demo of <strong>Tuxedo Menu</strong>, a simple jQuery menu plugin, combined with <a
+                    href="http://demo.onokumus.com/metisMenu/" target="_blank">metisMenu <span class="fa fa-fw fa-external-link"></span></a>.
             </p>
 
             <p>
-                There is also a demo of <a href="with-metis-menu.html">Tuxedo Menu with metisMenu</a>.
+                There is also a demo of <a href="index.html">Tuxedo Menu all by itself</a>.
             </p>
 
             <h3>Menu Style</h3>
@@ -84,11 +86,15 @@
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/metisMenu/2.0.2/metisMenu.min.js"></script>
 <script src="../dist/tuxedo-menu.min.js"></script>
 <script>
     (function ($) {
         var isFixed = true;
-        $('#sidebar').tuxedoMenu({isFixed: isFixed});
+        $('#sidebar').tuxedoMenu({isFixed: isFixed}).metisMenu({
+            toggle: false,
+            activeClass: 'active'
+        });
         $('#toggle-is-fixed').on('click', function () {
             $('#sidebar').tuxedoMenu({isFixed: isFixed = !isFixed});
             $('#menu-container').toggleClass('col-sm-3');

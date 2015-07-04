@@ -1,0 +1,12 @@
+@import "../variables";
+
+@mixin pad-menu-items($target-selector, $prefix-selector, $max-depth: 10) {
+    $base-selector: "ul";
+    @for $i from 1 through $max-depth {
+        $base-selector: nest($base-selector, "> li >", $target-selector);
+        #{$prefix-selector + $base-selector} {
+            padding-left: 15px * $i;
+        }
+        $base-selector: $base-selector + " + ul";
+    }
+}
