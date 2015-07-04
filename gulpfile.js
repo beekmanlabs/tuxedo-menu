@@ -2,7 +2,7 @@
 
 var gulp = require('gulp');
 var gutil = require('gulp-util');
-var sass = require('gulp-sass');
+var compass = require('gulp-compass');
 var autoprefixer = require('gulp-autoprefixer');
 var jshint = require('gulp-jshint');
 var minifyCSS = require('gulp-minify-css');
@@ -24,7 +24,13 @@ var options = {
 
 gulp.task('css', function () {
     return gulp.src(options.src + '/**/*.scss')
-        .pipe(sass())
+        .pipe(compass({
+            css: options.dist,
+            sass: options.src
+        }))
+        .on('error', function(error) {
+            console.log(error);
+        })
         .pipe(autoprefixer({browsers: ['last 2 versions', 'Explorer 9']}))
         .pipe(gulp.dest(options.dist))
         .pipe(sourcemaps.init())

@@ -81,14 +81,6 @@ __menuSelector__
 
 The jQuery selector for choosing which element to treat as the menu.
 
-__activeClass__
-
-The CSS class to add to a menu item when it is selected.
-
-__addActiveClass__
-
-A boolean to decide if an "active" class should be added to a menu item when it is selected.
-
 __isFixed__
 
 A boolean to make the menu fixed or in the flow of the document.
