@@ -6,12 +6,11 @@ $tuxedo-menu-bg:            #0f0f0f;
 // Type
 $tuxedo-menu-font-family:      'Helvetica Neue', Helvetica, Arial, sans-serif !default;
 $tuxedo-menu-font-size-base:   13px !default;
-$tuxedo-menu-font-weight:      700 !default;
+$tuxedo-menu-font-weight:      600 !default;
 
 // Items
 $tuxedo-menu-item-border-left:     none !default;
 $tuxedo-menu-item-max-depth:       10 !default;
-$tuxedo-menu-item-depth-prefix:    menu-depth- !default;
 $tuxedo-menu-item-height:          20px  !default;
 $tuxedo-menu-item-line-height:     $tuxedo-menu-item-height !default;
 
@@ -22,8 +21,6 @@ $tuxedo-menu-link-vertical-padding:    10px !default;
 $tuxedo-menu-link-color:               #e0e0e0 !default;
 $tuxedo-menu-link-hover-color:         #fff !default;
 $tuxedo-menu-link-hover-bg:            #4f4f4f !default;
-$tuxedo-menu-link-active-color:        #333 !default;
-$tuxedo-menu-link-active-bg:           #fff !default;
 $tuxedo-menu-link-border:              none !default;
 
 // Heading

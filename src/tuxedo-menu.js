@@ -9,8 +9,6 @@
         settings = $.extend({
             triggerSelector: '.tuxedo-menu-trigger',
             menuSelector: '.tuxedo-menu',
-            activeClass: 'active',
-            addActiveClass: true,
             isFixed: true
         }, options);
 
@@ -43,13 +41,6 @@
                     .addClass('slideOutLeft');
             }
         });
-
-        if (settings.addActiveClass) {
-            $(settings.menuSelector + ' li').on('click', function () {
-                $(this).siblings().removeClass(settings.activeClass);
-                $(this).addClass(settings.activeClass);
-            });
-        }
 
         return self;
     };

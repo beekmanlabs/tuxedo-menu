@@ -1,87 +1,101 @@
 .tuxedo-menu-trigger:hover, .tuxedo-menu-trigger:focus {
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 .tuxedo-menu {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: #0f0f0f;
   -webkit-animation-duration: 200ms;
           animation-duration: 200ms;
-  display: none; }
-  .tuxedo-menu ul {
-    margin: 0;
-    padding: 0;
-    list-style: none; }
-    .tuxedo-menu ul li {
-      border-left: none; }
-      .tuxedo-menu ul li:last-child {
-        border-bottom: none; }
-      .tuxedo-menu ul li a {
-        color: #e0e0e0;
-        font-size: 13px;
-        text-decoration: none; }
-        .tuxedo-menu ul li a:hover, .tuxedo-menu ul li a:focus {
-          color: #fff;
-          background: #4f4f4f; }
-      .tuxedo-menu ul li a, .tuxedo-menu ul li .heading {
-        font-weight: 700;
-        border-top: none;
-        border-right: none;
-        border-left: none;
-        display: block;
-        padding: 10px 15px;
-        line-height: 20px; }
-      .tuxedo-menu ul li .heading {
-        font-size: 13px;
-        font-weight: 0;
-        color: #666; }
-      .tuxedo-menu ul li.active a {
-        color: #333;
-        background: #fff; }
-  .tuxedo-menu .menu-depth-0 a,
-  .tuxedo-menu .menu-depth-0 .heading {
-    padding-left: 15px; }
-  .tuxedo-menu .menu-depth-1 a,
-  .tuxedo-menu .menu-depth-1 .heading {
-    padding-left: 30px; }
-  .tuxedo-menu .menu-depth-2 a,
-  .tuxedo-menu .menu-depth-2 .heading {
-    padding-left: 45px; }
-  .tuxedo-menu .menu-depth-3 a,
-  .tuxedo-menu .menu-depth-3 .heading {
-    padding-left: 60px; }
-  .tuxedo-menu .menu-depth-4 a,
-  .tuxedo-menu .menu-depth-4 .heading {
-    padding-left: 75px; }
-  .tuxedo-menu .menu-depth-5 a,
-  .tuxedo-menu .menu-depth-5 .heading {
-    padding-left: 90px; }
-  .tuxedo-menu .menu-depth-6 a,
-  .tuxedo-menu .menu-depth-6 .heading {
-    padding-left: 105px; }
-  .tuxedo-menu .menu-depth-7 a,
-  .tuxedo-menu .menu-depth-7 .heading {
-    padding-left: 120px; }
-  .tuxedo-menu .menu-depth-8 a,
-  .tuxedo-menu .menu-depth-8 .heading {
-    padding-left: 135px; }
-  .tuxedo-menu .menu-depth-9 a,
-  .tuxedo-menu .menu-depth-9 .heading {
-    padding-left: 150px; }
-  .tuxedo-menu.tuxedo-menu-fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 30%;
-    height: 100%;
-    overflow-y: scroll;
-    z-index: 9999;
-    opacity: 1; }
-    .tuxedo-menu.tuxedo-menu-fixed ul li a,
-    .tuxedo-menu.tuxedo-menu-fixed ul li .heading {
-      height: 40px; }
-  .tuxedo-menu.tuxedo-menu-visible {
-    display: inherit; }
+  display: none;
+}
+.tuxedo-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.tuxedo-menu ul li {
+  border-left: none;
+}
+.tuxedo-menu ul li:last-child {
+  border-bottom: none;
+}
+.tuxedo-menu ul li a {
+  color: #e0e0e0;
+  font-size: 13px;
+  text-decoration: none;
+}
+.tuxedo-menu ul li a:hover, .tuxedo-menu ul li a:focus {
+  color: #fff;
+  background: #4f4f4f;
+}
+.tuxedo-menu ul li a, .tuxedo-menu ul li h1 {
+  font-weight: 600;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 15px;
+  line-height: 20px;
+}
+.tuxedo-menu ul li h1 {
+  font-size: 13px;
+  font-weight: 0;
+  color: #666;
+  margin: 0;
+}
+.tuxedo-menu > ul > li > .tuxedo-menu-item-content {
+  padding-left: 15px;
+}
+.tuxedo-menu > ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content {
+  padding-left: 30px;
+}
+.tuxedo-menu > ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content {
+  padding-left: 45px;
+}
+.tuxedo-menu > ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content {
+  padding-left: 60px;
+}
+.tuxedo-menu > ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content {
+  padding-left: 75px;
+}
+.tuxedo-menu > ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content {
+  padding-left: 90px;
+}
+.tuxedo-menu > ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content {
+  padding-left: 105px;
+}
+.tuxedo-menu > ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content {
+  padding-left: 120px;
+}
+.tuxedo-menu > ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content {
+  padding-left: 135px;
+}
+.tuxedo-menu > ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content + ul > li > .tuxedo-menu-item-content {
+  padding-left: 150px;
+}
+.tuxedo-menu.tuxedo-menu-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 9999;
+  opacity: 1;
+}
+.tuxedo-menu.tuxedo-menu-fixed ul li a,
+.tuxedo-menu.tuxedo-menu-fixed ul li .heading {
+  height: 40px;
+}
+.tuxedo-menu.tuxedo-menu-visible {
+  display: inherit;
+}
 
 @media (max-width: 768px) {
   .tuxedo-menu.tuxedo-menu-fixed {
-    width: 80%; } }
+    width: 80%;
+  }
+}
