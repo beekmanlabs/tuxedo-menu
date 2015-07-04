@@ -21,10 +21,10 @@
             if (!settings.isFixed) {
                 return;
             }
-
             $(settings.menuSelector)
                 .toggleClass('slideInLeft slideOutLeft')
                 .addClass('tuxedo-menu-visible');
+            return false;
         });
 
         $(document).click(function (event) {
