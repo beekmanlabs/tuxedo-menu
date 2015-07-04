@@ -31,17 +31,36 @@ __Create an HTML menu__
 ```html
 <nav id="myMenu" class="tuxedo-menu">
     <ul>
-        <li class="menu-depth-0"><a href="#">Item 1</a></li>
-        <li class="menu-depth-0"><div class="heading">Heading 2</div></li>
-        <li class="menu-depth-0"><a href="#">Item 2</a></li>
-        <li class="menu-depth-1"><a href="#">Item 2.1</a></li>
-        <li class="menu-depth-1"><a href="#">Item 2.2</a></li>
-        <li class="menu-depth-2"><a href="#">Item 2.2.1</a></li>
-        <li class="menu-depth-0"><a href="#">Item 3</a></li>
-        <li class="menu-depth-0"><div class="heading">Heading 4</div></li>
-        <li class="menu-depth-0"><a href="#">Item 4</a></li>
-        <li class="menu-depth-0"><div class="heading">Heading 4.1</div></li>
-        <li class="menu-depth-1"><a href="#">Item 4.1</a></li>
+        <li>
+            <h1 class="tuxedo-menu-item-content">Heading 1</h1>
+        </li>
+        <li><a href="#" class="tuxedo-menu-item-content">Item 1</a></li>
+        <li>
+            <h1 class="tuxedo-menu-item-content">Heading 2</h1>
+        </li>
+        <li><a href="#" class="tuxedo-menu-item-content">Item 2</a>
+            <ul>
+                <li><a href="#" class="tuxedo-menu-item-content">Item 2.1</a></li>
+                <li><a href="#" class="tuxedo-menu-item-content">Item 2.2</a>
+                    <ul>
+                        <li><h1 class="tuxedo-menu-item-content">Heading 2.2.1</h1></li>
+                        <li><a href="#" class="tuxedo-menu-item-content">Item 2.2.1</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#" class="tuxedo-menu-item-content">Item 3</a></li>
+        <li>
+            <h1 class="tuxedo-menu-item-content">Heading 4</h1>
+        </li>
+        <li><a href="#" class="tuxedo-menu-item-content">Item 4</a>
+            <ul>
+                <li>
+                    <h1 class="tuxedo-menu-item-content">Heading 4.1</h1>
+                </li>
+                <li><a href="#" class="tuxedo-menu-item-content">Item 4.1</a></li>
+            </ul>
+        </li>
     </ul>
 </nav>
 ```
@@ -67,8 +86,6 @@ __For mobile, Add a Viewport Meta Tag to the Page's Head Element__
 jQuery('#myMenu').tuxedoMenu({
     triggerSelector: '.tuxedo-menu-trigger',
     menuSelector: '.tuxedo-menu',
-    activeClass: 'active',
-    addActiveClass: true,
     isFixed: true
 });
 ```
