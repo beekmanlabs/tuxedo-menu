@@ -13,16 +13,27 @@
 <body>
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
-        <button type="button" class="navbar-toggle tuxedo-menu-trigger">
+        <button type="button" class="navbar-toggle tuxedo-menu-trigger navbar-left">
             <span class="sr-only">Toggle navigation</span>
-            &#9776;
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
         </button>
         <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
             <a class="navbar-brand navbar-right" href="#">Tuxedo Menu</a>
         </div>
-        <ul class="nav navbar-nav">
-            <li><a href="https://github.com/beekmanlabs/tuxedo-menu" target="_blank">GitHub<span class="fa fa-fw fa-external-link"></span></a></li>
-        </ul>
+
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="https://github.com/beekmanlabs/tuxedo-menu" target="_blank">GitHub</a></li>
+            </ul>
+        </div>
     </div>
 </nav>
 <main class="container">
@@ -90,6 +101,7 @@
     </div>
 </footer>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="../dist/tuxedo-menu.min.js"></script>
 <script>
     (function ($) {

@@ -2,8 +2,9 @@ body {
     margin-top: 40px;
 }
 
-.navbar-toggle {
+.navbar-toggle.tuxedo-menu-trigger {
     display: block;
+    float: left;
 }
 
 footer {
