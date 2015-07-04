@@ -80,7 +80,7 @@
 
             <h3>Menu Style</h3>
             <button class="btn btn-default" id="toggle-is-fixed">
-                Sidebar
+                Drawer
             </button>
         </div>
     </div>
@@ -107,7 +107,7 @@
             $('#menu-container').toggleClass('col-sm-3');
             $('.tuxedo-menu-trigger').toggleClass('hidden');
             $(this).html(isFixed ? 'Drawer' : 'Sidebar');
-        }).click();
+        });
     })(jQuery);
 </script>
 </body>
