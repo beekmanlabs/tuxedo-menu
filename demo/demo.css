@@ -6,3 +6,11 @@ body {
     display: block;
 }
 
+footer {
+    padding: 100px 0;
+    font-size: 15px;
+    text-align: center !important;
+    text-transform: uppercase;
+    opacity: 0.6;
+    transition: opacity .2s ease;
+}
