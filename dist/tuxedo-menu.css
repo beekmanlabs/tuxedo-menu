@@ -46,34 +46,34 @@
   color: #666;
   margin: 0;
 }
-.tuxedo-menu > ul > li :first-child:not(li) {
+.tuxedo-menu > ul > li > :first-child {
   padding-left: 15px;
 }
-.tuxedo-menu > ul > li :first-child:not(li) + ul > li :first-child:not(li) {
+.tuxedo-menu > ul > li > :first-child + ul > li > :first-child {
   padding-left: 30px;
 }
-.tuxedo-menu > ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) {
+.tuxedo-menu > ul > li > :first-child + ul > li > :first-child + ul > li > :first-child {
   padding-left: 45px;
 }
-.tuxedo-menu > ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) {
+.tuxedo-menu > ul > li > :first-child + ul > li > :first-child + ul > li > :first-child + ul > li > :first-child {
   padding-left: 60px;
 }
-.tuxedo-menu > ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) {
+.tuxedo-menu > ul > li > :first-child + ul > li > :first-child + ul > li > :first-child + ul > li > :first-child + ul > li > :first-child {
   padding-left: 75px;
 }
-.tuxedo-menu > ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) {
+.tuxedo-menu > ul > li > :first-child + ul > li > :first-child + ul > li > :first-child + ul > li > :first-child + ul > li > :first-child + ul > li > :first-child {
   padding-left: 90px;
 }
-.tuxedo-menu > ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) {
+.tuxedo-menu > ul > li > :first-child + ul > li > :first-child + ul > li > :first-child + ul > li > :first-child + ul > li > :first-child + ul > li > :first-child + ul > li > :first-child {
   padding-left: 105px;
 }
-.tuxedo-menu > ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) {
+.tuxedo-menu > ul > li > :first-child + ul > li > :first-child + ul > li > :first-child + ul > li > :first-child + ul > li > :first-child + ul > li > :first-child + ul > li > :first-child + ul > li > :first-child {
   padding-left: 120px;
 }
-.tuxedo-menu > ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) {
+.tuxedo-menu > ul > li > :first-child + ul > li > :first-child + ul > li > :first-child + ul > li > :first-child + ul > li > :first-child + ul > li > :first-child + ul > li > :first-child + ul > li > :first-child + ul > li > :first-child {
   padding-left: 135px;
 }
-.tuxedo-menu > ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) + ul > li :first-child:not(li) {
+.tuxedo-menu > ul > li > :first-child + ul > li > :first-child + ul > li > :first-child + ul > li > :first-child + ul > li > :first-child + ul > li > :first-child + ul > li > :first-child + ul > li > :first-child + ul > li > :first-child + ul > li > :first-child {
   padding-left: 150px;
 }
 .tuxedo-menu.tuxedo-menu-fixed {
