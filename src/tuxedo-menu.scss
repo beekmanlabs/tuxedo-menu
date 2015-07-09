@@ -1,5 +1,4 @@
 @import "variables";
-@import "mixins/pad-menu-items";
 @import "tuxedo-menu-trigger";
 
 .tuxedo-menu {
@@ -52,7 +51,14 @@
         }
     }
 
-    @include pad-menu-items(".tuxedo-menu-item-content", "> ", $tuxedo-menu-item-max-depth);
+    $base-menu-selector: "ul";
+    @for $i from 1 through $tuxedo-menu-item-max-depth {
+        $base-menu-selector: nest($base-menu-selector, "> li :first-child:not(li)");
+        #{"> " + $base-menu-selector} {
+            padding-left: 15px * $i;
+        }
+        $base-menu-selector: $base-menu-selector + " + ul";
+    }
 
     &.tuxedo-menu-fixed {
         position: fixed;
