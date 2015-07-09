@@ -91,7 +91,7 @@
   height: 40px;
 }
 .tuxedo-menu.tuxedo-menu-visible {
-  display: inherit;
+  display: block;
 }
 
 @media (max-width: 768px) {
