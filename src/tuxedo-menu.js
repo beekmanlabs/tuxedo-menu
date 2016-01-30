@@ -32,9 +32,11 @@
                 $(event.target).is(settings.triggerSelector)) {
                 return;
             }
-
-            if (!$(event.target).is(settings.triggerSelector) &&
-                !$(event.target).closest(settings.menuSelector).length) {
+            if ((!$(event.target).is(settings.triggerSelector) &&
+                !$(event.target).closest(settings.menuSelector).length) ||
+                ($(event.target).is('a') &&
+                !$(event.target).next().is('ul') &&
+                $.contains($(settings.menuSelector)[0], event.target))) {
 
                 $(settings.menuSelector)
                     .removeClass('slideInLeft')
@@ -44,4 +46,4 @@
 
         return self;
     };
-}(jQuery));
+})(jQuery);
