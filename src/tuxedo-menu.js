@@ -35,7 +35,7 @@
             if ((!$(event.target).is(settings.triggerSelector) &&
                 !$(event.target).closest(settings.menuSelector).length) ||
                 ($(event.target).is('a') &&
-                !$(event.target).next().is('ul') &&
+                !$(event.target).next().is('ul.collapse, ul.collapsing') &&
                 $.contains($(settings.menuSelector)[0], event.target))) {
 
                 $(settings.menuSelector)
