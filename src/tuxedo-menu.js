@@ -32,12 +32,14 @@
                 $(event.target).is(settings.triggerSelector)) {
                 return;
             }
-            if ((!$(event.target).is(settings.triggerSelector) &&
-                !$(event.target).closest(settings.menuSelector).length) ||
-                ($(event.target).is('a') &&
-                !$(event.target).next().is('ul.collapse, ul.collapsing') &&
-                $.contains($(settings.menuSelector)[0], event.target))) {
 
+            var isTrigger = $(event.target).is(settings.triggerSelector);
+            var isMenu = $(event.target).closest(settings.menuSelector).length === 1;
+            var isClickAbleMenuItem = $(event.target).closest('a').length === 1;
+            var isParentOfCollapsibleChildren = $(event.target).next().is('ul.collapse, ul.collapsing');
+            var isChildElementOfMenu = $.contains($(settings.menuSelector)[0], event.target);
+            if ((!isTrigger && !isMenu) ||
+                (isClickAbleMenuItem && !isParentOfCollapsibleChildren && isChildElementOfMenu)) {
                 $(settings.menuSelector)
                     .removeClass('slideInLeft')
                     .addClass('slideOutLeft');
