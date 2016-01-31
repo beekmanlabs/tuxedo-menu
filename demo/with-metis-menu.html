@@ -12,34 +12,16 @@
     <link rel="stylesheet" href="demo.css">
 </head>
 <body>
-<nav class="navbar navbar-default navbar-fixed-top">
+<div class='tuxedo-navbar'>
     <div class="container">
-        <button type="button" class="navbar-toggle tuxedo-menu-trigger navbar-left">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand navbar-right" href="#">Tuxedo Menu</a>
-        </div>
-
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="https://github.com/beekmanlabs/tuxedo-menu" target="_blank">GitHub</a></li>
-            </ul>
-        </div>
+        <span class="tuxedo-menu-trigger">&#9776;</span>
     </div>
-</nav>
+</div>
+
+<a href="https://github.com/beekmanlabs/tuxedo-menu"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+
 <main class="container">
     <h1 class="page-header">Tuxedo Menu <small>with metisMenu</small></h1>
-
     <div class="row">
         <div id="menu-container">
             <nav id="sidebar" class="tuxedo-menu metismenu">
@@ -88,10 +70,11 @@
                 There is also a demo of <a href="index.html">Tuxedo Menu all by itself</a>.
             </p>
 
-            <h3>Menu Style</h3>
-            <button class="btn btn-default" id="toggle-is-fixed">
-                Drawer
-            </button>
+            <p>
+                <button class="btn btn-default" id="toggle-is-fixed">
+                    Change menu style to <strong id="menu-style">Sidebar</strong>.
+                </button>
+            </p>
         </div>
     </div>
 </main>
@@ -117,7 +100,7 @@
             $('#sidebar').tuxedoMenu({isFixed: isFixed = !isFixed});
             $('#menu-container').toggleClass('col-sm-3');
             $('.tuxedo-menu-trigger').toggleClass('hidden');
-            $(this).html(isFixed ? 'Drawer' : 'Sidebar');
+            $('#menu-style').html(isFixed ? 'Sidebar' : 'Drawer');
         });
     })(jQuery);
 </script>

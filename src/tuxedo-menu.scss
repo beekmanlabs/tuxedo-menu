@@ -1,89 +1,90 @@
 @import "variables";
 @import "tuxedo-menu-trigger";
+@import "tuxedo-navbar";
 
 .tuxedo-menu {
-    font-family: $tuxedo-menu-font-family;
-    background: $tuxedo-menu-bg;
-    animation-duration: 200ms;
-    display: none;
+  font-family: $tuxedo-menu-font-family;
+  background: $tuxedo-menu-bg;
+  animation-duration: 200ms;
+  display: none;
 
-    ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 
-        li {
-            border-left: $tuxedo-menu-item-border-left;
+    li {
+      border-left: $tuxedo-menu-item-border-left;
 
-            &:last-child {
-                border-bottom: $tuxedo-menu-link-border;
-            }
+      &:last-child {
+        border-bottom: $tuxedo-menu-link-border;
+      }
 
-            a {
-                color: $tuxedo-menu-link-color;
-                font-size: $tuxedo-menu-link-font-size;
-                text-decoration: none;
+      a {
+        color: $tuxedo-menu-link-color;
+        font-size: $tuxedo-menu-link-font-size;
+        text-decoration: none;
 
-                &:hover, &:focus {
-                    color: $tuxedo-menu-link-hover-color;
-                    background: $tuxedo-menu-link-hover-bg;
-                }
-            }
-
-            a, h1 {
-                font-weight: $tuxedo-menu-font-weight;
-                border-top: $tuxedo-menu-link-border;
-                border-right: $tuxedo-menu-link-border;
-                border-left: none;
-                display: block;
-                padding-top: $tuxedo-menu-link-vertical-padding;
-                padding-bottom: $tuxedo-menu-link-vertical-padding;
-                padding-right: $tuxedo-menu-link-horizontal-padding;
-                line-height: $tuxedo-menu-item-line-height;
-            }
-
-            h1 {
-                font-size: $tuxedo-menu-heading-font-size;
-                font-weight: $tuxedo-menu-heading-font-weight;
-                color: $tuxedo-menu-heading-color;
-                margin: 0;
-            }
+        &:hover, &:focus {
+          color: $tuxedo-menu-link-hover-color;
+          background: $tuxedo-menu-link-hover-bg;
         }
-    }
+      }
 
-    $base-menu-selector: "ul";
-    @for $i from 1 through $tuxedo-menu-item-max-depth {
-        $base-menu-selector: nest($base-menu-selector, "> li > :first-child");
-        #{"> " + $base-menu-selector} {
-            padding-left: 15px * $i;
-        }
-        $base-menu-selector: $base-menu-selector + " + ul";
-    }
-
-    &.tuxedo-menu-fixed {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 30%;
-        height: 100%;
-        overflow-y: auto;
-        z-index: 9999;
-        opacity: 1;
-
-        ul li a,
-        ul li .heading {
-            height: $tuxedo-menu-item-height * 2;
-        }
-    }
-
-    &.tuxedo-menu-visible {
+      a, h1 {
+        font-weight: $tuxedo-menu-font-weight;
+        border-top: $tuxedo-menu-link-border;
+        border-right: $tuxedo-menu-link-border;
+        border-left: none;
         display: block;
+        padding-top: $tuxedo-menu-link-vertical-padding;
+        padding-bottom: $tuxedo-menu-link-vertical-padding;
+        padding-right: $tuxedo-menu-link-horizontal-padding;
+        line-height: $tuxedo-menu-item-line-height;
+      }
+
+      h1 {
+        font-size: $tuxedo-menu-heading-font-size;
+        font-weight: $tuxedo-menu-heading-font-weight;
+        color: $tuxedo-menu-heading-color;
+        margin: 0;
+      }
     }
+  }
+
+  $base-menu-selector: "ul";
+  @for $i from 1 through $tuxedo-menu-item-max-depth {
+    $base-menu-selector: nest($base-menu-selector, "> li > :first-child");
+    #{"> " + $base-menu-selector} {
+      padding-left: 15px * $i;
+    }
+    $base-menu-selector: $base-menu-selector + " + ul";
+  }
+
+  &.tuxedo-menu-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 9999;
+    opacity: 1;
+
+    ul li a,
+    ul li .heading {
+      height: $tuxedo-menu-item-height * 2;
+    }
+  }
+
+  &.tuxedo-menu-visible {
+    display: block;
+  }
 }
 
 @media (max-width: 768px) {
-    .tuxedo-menu.tuxedo-menu-fixed {
-        width: 80%;
-    }
+  .tuxedo-menu.tuxedo-menu-fixed {
+    width: 80%;
+  }
 }
 

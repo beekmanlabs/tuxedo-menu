@@ -1,0 +1,16 @@
+@import "variables";
+
+.tuxedo-navbar {
+  background-color: $tuxedo-menu-gray-base;
+  padding: 1em;
+}
+
+.tuxedo-navbar .tuxedo-menu-trigger {
+  font-size: 24px;
+  color: $tuxedo-menu-trigger;
+}
+
+.tuxedo-navbar a:hover,
+.tuxedo-navbar a:focus {
+  text-decoration: none;
+}

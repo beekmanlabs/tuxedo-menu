@@ -1,7 +1,8 @@
 // Colors
-$tuxedo-menu-gray-base:     #f9f9f9;
-$tuxedo-menu-brand-primary: #0f0;
-$tuxedo-menu-bg:            #0f0f0f;
+$tuxedo-menu-gray-base:     #f9f9f9 !default;
+$tuxedo-menu-brand-primary: #0f0 !default;
+$tuxedo-menu-bg:            #0f0f0f !default;
+$tuxedo-menu-trigger:       $tuxedo-menu-bg !default;
 
 // Type
 $tuxedo-menu-font-family:      'Helvetica Neue', Helvetica, Arial, sans-serif !default;

@@ -2,6 +2,21 @@
   cursor: pointer;
 }
 
+.tuxedo-navbar {
+  background-color: #eee;
+  padding: 1em;
+}
+
+.tuxedo-navbar .tuxedo-menu-trigger {
+  font-size: 24px;
+  color: #000;
+}
+
+.tuxedo-navbar a:hover,
+.tuxedo-navbar a:focus {
+  text-decoration: none;
+}
+
 .tuxedo-menu {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: #0f0f0f;
